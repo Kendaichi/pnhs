@@ -20,6 +20,9 @@ import ParentAttendancePage from "@/pages/ParentAttendancePage";
 import ParentSchedulePage from "@/pages/ParentSchedulePage";
 import EnrollmentPage from "@/pages/EnrollmentPage";
 import ReportsPage from "@/pages/ReportsPage";
+import StudentGradesPage from "@/pages/StudentGradesPage";
+import StudentAttendancePage from "@/pages/StudentAttendancePage";
+import StudentSchedulePage from "@/pages/StudentSchedulePage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
