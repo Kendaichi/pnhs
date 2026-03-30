@@ -50,6 +50,13 @@ const menuByRole: Record<UserRole, MenuItem[]> = {
     { title: 'Schedule', url: '/my-schedule', icon: CalendarDays },
     { title: 'Announcements', url: '/announcements', icon: Megaphone },
   ],
+  student: [
+    { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
+    { title: 'My Grades', url: '/student-grades', icon: FileText },
+    { title: 'My Attendance', url: '/student-attendance', icon: CalendarDays },
+    { title: 'My Schedule', url: '/student-schedule', icon: CalendarDays },
+    { title: 'Announcements', url: '/announcements', icon: Megaphone },
+  ],
 };
 
 export function AppSidebar() {

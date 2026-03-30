@@ -57,6 +57,9 @@ function AppRoutes() {
         <Route path="/my-schedule" element={<ParentSchedulePage />} />
         <Route path="/enrollment" element={<EnrollmentPage />} />
         <Route path="/reports" element={<ReportsPage />} />
+        <Route path="/student-grades" element={<StudentGradesPage />} />
+        <Route path="/student-attendance" element={<StudentAttendancePage />} />
+        <Route path="/student-schedule" element={<StudentSchedulePage />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>

@@ -181,6 +181,7 @@ const dashboardByRole: Record<UserRole, React.FC> = {
   teacher: TeacherDashboard,
   registrar: RegistrarDashboard,
   parent: ParentDashboard,
+  student: StudentDashboardPage,
 };
 
 export default function DashboardPage() {

@@ -36,6 +36,7 @@ export default function LoginPage() {
     { username: 'teacher1', role: 'Teacher', color: 'bg-secondary' },
     { username: 'registrar', role: 'Registrar', color: 'bg-accent' },
     { username: 'parent1', role: 'Parent', color: 'bg-info' },
+    { username: '100000000001', role: 'Student', color: 'bg-success' },
   ];
 
   return (
