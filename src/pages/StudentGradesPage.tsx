@@ -46,16 +46,11 @@ export default function StudentGradesPage() {
     const subGrades = grades.filter(g => g.subjectId === sub.id);
     const quarters: SubjectRow['quarters'] = {};
     subGrades.forEach(g => {
-      const result = computeQuarterlyGrade(
-        g.wwRawScore, g.wwHighestPossible,
-        g.ptRawScore, g.ptHighestPossible,
-        g.qaRawScore, g.qaHighestPossible,
-        sub.type
-      );
+      const result = computeQuarterlyGrade(g, sub.type);
       quarters[g.quarter] = {
-        ww: Math.round(result.weightedScore),
-        pt: Math.round(g.ptRawScore / g.ptHighestPossible * 100),
-        qa: Math.round(g.qaRawScore / g.qaHighestPossible * 100),
+        ww: Math.round(result.wwWeighted),
+        pt: Math.round(result.ptWeighted),
+        qa: Math.round(result.qaWeighted),
         qg: result.quarterlyGrade,
       };
     });

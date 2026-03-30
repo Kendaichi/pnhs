@@ -34,7 +34,7 @@ export default function StudentDashboardPage() {
   grades.forEach(g => {
     const sub = getSubjectById(g.subjectId);
     if (!sub) return;
-    const result = computeQuarterlyGrade(g.wwRawScore, g.wwHighestPossible, g.ptRawScore, g.ptHighestPossible, g.qaRawScore, g.qaHighestPossible, sub.type);
+    const result = computeQuarterlyGrade(g, sub.type);
     if (!subjectGrades.has(g.subjectId)) subjectGrades.set(g.subjectId, []);
     subjectGrades.get(g.subjectId)!.push(result.quarterlyGrade);
   });
