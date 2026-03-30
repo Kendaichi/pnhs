@@ -197,6 +197,17 @@ export const announcements: Announcement[] = [
 ];
 
 // ===== USERS =====
+function generateStudentUsers(): User[] {
+  return students.map((stu, idx) => ({
+    id: `u-stu${idx + 1}`,
+    username: stu.lrn,
+    role: 'student' as const,
+    refId: stu.id,
+    name: `${stu.firstName} ${stu.lastName}`,
+    mustChangePassword: true,
+  }));
+}
+
 export const users: User[] = [
   { id: 'u1', username: 'admin', role: 'admin', refId: 'st1', name: 'Ricardo Dela Cruz' },
   { id: 'u2', username: 'registrar', role: 'registrar', refId: 'st2', name: 'Elena Aquino' },
@@ -205,6 +216,7 @@ export const users: User[] = [
   { id: 'u5', username: 'parent1', role: 'parent', refId: 'g1', name: 'Maria Santos' },
   { id: 'u6', username: 'parent2', role: 'parent', refId: 'g2', name: 'Jose Reyes' },
   { id: 'u7', username: 'parent3', role: 'parent', refId: 'g3', name: 'Ana Cruz' },
+  ...generateStudentUsers(),
 ];
 
 // ===== HELPER LOOKUPS =====
