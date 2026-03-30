@@ -20,6 +20,9 @@ import ParentAttendancePage from "@/pages/ParentAttendancePage";
 import ParentSchedulePage from "@/pages/ParentSchedulePage";
 import EnrollmentPage from "@/pages/EnrollmentPage";
 import ReportsPage from "@/pages/ReportsPage";
+import StudentGradesPage from "@/pages/StudentGradesPage";
+import StudentAttendancePage from "@/pages/StudentAttendancePage";
+import StudentSchedulePage from "@/pages/StudentSchedulePage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +57,9 @@ function AppRoutes() {
         <Route path="/my-schedule" element={<ParentSchedulePage />} />
         <Route path="/enrollment" element={<EnrollmentPage />} />
         <Route path="/reports" element={<ReportsPage />} />
+        <Route path="/student-grades" element={<StudentGradesPage />} />
+        <Route path="/student-attendance" element={<StudentAttendancePage />} />
+        <Route path="/student-schedule" element={<StudentSchedulePage />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>

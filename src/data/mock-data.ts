@@ -190,13 +190,24 @@ export const attendanceRecords: AttendanceRecord[] = generateAttendance();
 
 // ===== ANNOUNCEMENTS =====
 export const announcements: Announcement[] = [
-  { id: 'ann1', title: 'Welcome to S.Y. 2025-2026!', content: 'Rizal National High School welcomes all students, parents, and staff to a new and exciting school year. Let us work together for a productive academic year ahead.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'registrar', 'parent'], createdAt: '2025-06-02T08:00:00Z', isPublished: true },
-  { id: 'ann2', title: 'First Quarter Examinations Schedule', content: 'The first quarterly examinations will be held from August 18-22, 2025. Please ensure all students are prepared. Review materials will be provided by respective teachers.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'parent'], createdAt: '2025-07-15T08:00:00Z', isPublished: true },
+{ id: 'ann1', title: 'Welcome to S.Y. 2025-2026!', content: 'Rizal National High School welcomes all students, parents, and staff to a new and exciting school year. Let us work together for a productive academic year ahead.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'registrar', 'parent', 'student'], createdAt: '2025-06-02T08:00:00Z', isPublished: true },
+  { id: 'ann2', title: 'First Quarter Examinations Schedule', content: 'The first quarterly examinations will be held from August 18-22, 2025. Please ensure all students are prepared. Review materials will be provided by respective teachers.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'parent', 'student'], createdAt: '2025-07-15T08:00:00Z', isPublished: true },
   { id: 'ann3', title: 'Grade Submission Deadline', content: 'All teachers are reminded to submit Q1 grades by September 5, 2025. Please use the grade encoding module for timely submission.', authorId: 'st2', targetRoles: ['admin', 'teacher'], createdAt: '2025-08-25T08:00:00Z', isPublished: true },
-  { id: 'ann4', title: 'Parent-Teacher Conference', content: 'The Q1 Parent-Teacher Conference is scheduled for September 13, 2025. Parents are encouraged to attend and discuss their child\'s progress with their teachers.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'parent'], createdAt: '2025-09-01T08:00:00Z', isPublished: true },
+  { id: 'ann4', title: 'Parent-Teacher Conference', content: 'The Q1 Parent-Teacher Conference is scheduled for September 13, 2025. Parents are encouraged to attend and discuss their child\'s progress with their teachers.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'parent', 'student'], createdAt: '2025-09-01T08:00:00Z', isPublished: true },
 ];
 
 // ===== USERS =====
+function generateStudentUsers(): User[] {
+  return students.map((stu, idx) => ({
+    id: `u-stu${idx + 1}`,
+    username: stu.lrn,
+    role: 'student' as const,
+    refId: stu.id,
+    name: `${stu.firstName} ${stu.lastName}`,
+    mustChangePassword: true,
+  }));
+}
+
 export const users: User[] = [
   { id: 'u1', username: 'admin', role: 'admin', refId: 'st1', name: 'Ricardo Dela Cruz' },
   { id: 'u2', username: 'registrar', role: 'registrar', refId: 'st2', name: 'Elena Aquino' },
@@ -205,6 +216,7 @@ export const users: User[] = [
   { id: 'u5', username: 'parent1', role: 'parent', refId: 'g1', name: 'Maria Santos' },
   { id: 'u6', username: 'parent2', role: 'parent', refId: 'g2', name: 'Jose Reyes' },
   { id: 'u7', username: 'parent3', role: 'parent', refId: 'g3', name: 'Ana Cruz' },
+  ...generateStudentUsers(),
 ];
 
 // ===== HELPER LOOKUPS =====

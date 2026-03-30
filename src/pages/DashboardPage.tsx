@@ -6,6 +6,7 @@ import { students, enrollments, staff, sections, announcements, gradeRecords, ge
 import { computeQuarterlyGrade } from '@/lib/grading';
 import { GraduationCap, Users, BookOpen, FileText, Megaphone, CalendarDays } from 'lucide-react';
 import type { UserRole } from '@/types';
+import StudentDashboardPage from './StudentDashboardPage';
 
 function AdminDashboard() {
   const activeEnrollments = enrollments.filter(e => e.status === 'Active').length;
@@ -180,6 +181,7 @@ const dashboardByRole: Record<UserRole, React.FC> = {
   teacher: TeacherDashboard,
   registrar: RegistrarDashboard,
   parent: ParentDashboard,
+  student: StudentDashboardPage,
 };
 
 export default function DashboardPage() {
