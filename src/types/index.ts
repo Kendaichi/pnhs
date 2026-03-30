@@ -1,5 +1,5 @@
 // ===== USER & AUTH =====
-export type UserRole = 'admin' | 'teacher' | 'registrar' | 'parent';
+export type UserRole = 'admin' | 'teacher' | 'registrar' | 'parent' | 'student';
 
 export interface User {
   id: string;
