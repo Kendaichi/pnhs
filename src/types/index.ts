@@ -5,9 +5,10 @@ export interface User {
   id: string;
   username: string;
   role: UserRole;
-  refId: string; // staff.id or guardian.id
+  refId: string; // staff.id, guardian.id, or student.id
   name: string;
   avatarUrl?: string;
+  mustChangePassword?: boolean;
 }
 
 // ===== SCHOOL =====
