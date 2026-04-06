@@ -141,6 +141,7 @@ export interface Announcement {
   targetRoles: UserRole[];
   createdAt: string;
   isPublished: boolean;
+  imageUrl?: string;
 }
 
 // ===== COMPUTED TYPES =====
