@@ -189,11 +189,16 @@ function generateAttendance(): AttendanceRecord[] {
 export const attendanceRecords: AttendanceRecord[] = generateAttendance();
 
 // ===== ANNOUNCEMENTS =====
+import welcomeImg from '@/assets/news/welcome-sy.jpg';
+import examsImg from '@/assets/news/exams-schedule.jpg';
+import gradeImg from '@/assets/news/grade-submission.jpg';
+import ptcImg from '@/assets/news/ptc-conference.jpg';
+
 export const announcements: Announcement[] = [
-{ id: 'ann1', title: 'Welcome to S.Y. 2025-2026!', content: 'Rizal National High School welcomes all students, parents, and staff to a new and exciting school year. Let us work together for a productive academic year ahead.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'registrar', 'parent', 'student'], createdAt: '2025-06-02T08:00:00Z', isPublished: true },
-  { id: 'ann2', title: 'First Quarter Examinations Schedule', content: 'The first quarterly examinations will be held from August 18-22, 2025. Please ensure all students are prepared. Review materials will be provided by respective teachers.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'parent', 'student'], createdAt: '2025-07-15T08:00:00Z', isPublished: true },
-  { id: 'ann3', title: 'Grade Submission Deadline', content: 'All teachers are reminded to submit Q1 grades by September 5, 2025. Please use the grade encoding module for timely submission.', authorId: 'st2', targetRoles: ['admin', 'teacher'], createdAt: '2025-08-25T08:00:00Z', isPublished: true },
-  { id: 'ann4', title: 'Parent-Teacher Conference', content: 'The Q1 Parent-Teacher Conference is scheduled for September 13, 2025. Parents are encouraged to attend and discuss their child\'s progress with their teachers.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'parent', 'student'], createdAt: '2025-09-01T08:00:00Z', isPublished: true },
+  { id: 'ann1', title: 'Welcome to S.Y. 2025-2026!', content: 'Rizal National High School welcomes all students, parents, and staff to a new and exciting school year. Let us work together for a productive academic year ahead.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'registrar', 'parent', 'student'], createdAt: '2025-06-02T08:00:00Z', isPublished: true, imageUrl: welcomeImg },
+  { id: 'ann2', title: 'First Quarter Examinations Schedule', content: 'The first quarterly examinations will be held from August 18-22, 2025. Please ensure all students are prepared. Review materials will be provided by respective teachers.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'parent', 'student'], createdAt: '2025-07-15T08:00:00Z', isPublished: true, imageUrl: examsImg },
+  { id: 'ann3', title: 'Grade Submission Deadline', content: 'All teachers are reminded to submit Q1 grades by September 5, 2025. Please use the grade encoding module for timely submission.', authorId: 'st2', targetRoles: ['admin', 'teacher'], createdAt: '2025-08-25T08:00:00Z', isPublished: true, imageUrl: gradeImg },
+  { id: 'ann4', title: 'Parent-Teacher Conference', content: 'The Q1 Parent-Teacher Conference is scheduled for September 13, 2025. Parents are encouraged to attend and discuss their child\'s progress with their teachers.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'parent', 'student'], createdAt: '2025-09-01T08:00:00Z', isPublished: true, imageUrl: ptcImg },
 ];
 
 // ===== USERS =====

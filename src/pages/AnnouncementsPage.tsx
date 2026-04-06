@@ -18,7 +18,12 @@ export default function AnnouncementsPage() {
         {filtered.map(ann => {
           const author = staff.find(s => s.id === ann.authorId);
           return (
-            <Card key={ann.id} className="shadow-card">
+            <Card key={ann.id} className="shadow-card overflow-hidden">
+              {ann.imageUrl && (
+                <div className="aspect-[21/9] overflow-hidden">
+                  <img src={ann.imageUrl} alt={ann.title} className="w-full h-full object-cover" loading="lazy" width={800} height={512} />
+                </div>
+              )}
               <CardHeader className="pb-2">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3">
