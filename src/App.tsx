@@ -23,6 +23,7 @@ import ReportsPage from "@/pages/ReportsPage";
 import StudentGradesPage from "@/pages/StudentGradesPage";
 import StudentAttendancePage from "@/pages/StudentAttendancePage";
 import StudentSchedulePage from "@/pages/StudentSchedulePage";
+import PublicNewsPage from "@/pages/PublicNewsPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ function AppRoutes() {
   if (!isAuthenticated) {
     return (
       <Routes>
+        <Route path="/news" element={<PublicNewsPage />} />
         <Route path="*" element={<LoginPage />} />
       </Routes>
     );
@@ -41,6 +43,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/dashboard" replace />} />
+      <Route path="/news" element={<PublicNewsPage />} />
       <Route element={<DashboardLayout />}>
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/students" element={<StudentsPage />} />

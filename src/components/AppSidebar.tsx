@@ -6,7 +6,7 @@ import {
 } from '@/components/ui/sidebar';
 import {
   LayoutDashboard, Users, BookOpen, ClipboardList, GraduationCap, UserCog,
-  Megaphone, FileText, CalendarDays, LogOut, School,
+  Megaphone, FileText, CalendarDays, LogOut, School, ChevronRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { UserRole } from '@/types';
@@ -70,28 +70,29 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="gradient-sidebar border-r-0">
       <div className="p-4 flex items-center gap-3 border-b border-sidebar-border">
-        <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-sidebar-primary flex-shrink-0">
+        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-sidebar-primary/90 flex-shrink-0 shadow-lg shadow-sidebar-primary/20">
           <School className="w-5 h-5 text-sidebar-primary-foreground" />
         </div>
         {!collapsed && (
           <div className="min-w-0">
-            <p className="text-sm font-heading font-bold text-sidebar-foreground truncate">RNHS</p>
-            <p className="text-xs text-sidebar-foreground/60 capitalize">{user.role}</p>
+            <p className="text-sm font-heading font-bold text-sidebar-foreground tracking-tight truncate">RNHS</p>
+            <p className="text-[11px] text-sidebar-foreground/50 capitalize">{user.role} Portal</p>
           </div>
         )}
       </div>
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-sidebar-foreground/50">Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-sidebar-foreground/40 uppercase tracking-wider text-[10px] font-semibold">Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild>
-                    <NavLink to={item.url} end className="text-sidebar-foreground/80 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground" activeClassName="bg-sidebar-accent text-sidebar-accent-foreground font-medium">
-                      <item.icon className="mr-2 h-4 w-4 flex-shrink-0" />
-                      {!collapsed && <span>{item.title}</span>}
+                    <NavLink to={item.url} end className="text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground rounded-lg transition-all" activeClassName="bg-sidebar-primary/15 text-sidebar-primary font-semibold">
+                      <item.icon className="mr-2.5 h-4 w-4 flex-shrink-0" />
+                      {!collapsed && <span className="flex-1">{item.title}</span>}
+                      {!collapsed && <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-50 transition-opacity" />}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -103,17 +104,17 @@ export function AppSidebar() {
 
       <SidebarFooter className="border-t border-sidebar-border p-3">
         {!collapsed && (
-          <div className="flex items-center gap-2 px-2 mb-2">
-            <div className="w-8 h-8 rounded-full bg-sidebar-accent flex items-center justify-center text-xs font-bold text-sidebar-accent-foreground">
+          <div className="flex items-center gap-2.5 px-2 mb-3">
+            <div className="w-9 h-9 rounded-full gradient-primary flex items-center justify-center text-xs font-bold text-white shadow-md">
               {user.name.charAt(0)}
             </div>
             <div className="min-w-0">
-              <p className="text-xs font-medium text-sidebar-foreground truncate">{user.name}</p>
-              <p className="text-[10px] text-sidebar-foreground/50">@{user.username}</p>
+              <p className="text-xs font-semibold text-sidebar-foreground truncate">{user.name}</p>
+              <p className="text-[10px] text-sidebar-foreground/40">@{user.username}</p>
             </div>
           </div>
         )}
-        <Button variant="ghost" size="sm" onClick={logout} className="w-full justify-start text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent">
+        <Button variant="ghost" size="sm" onClick={logout} className="w-full justify-start text-sidebar-foreground/50 hover:text-sidebar-foreground hover:bg-sidebar-accent rounded-lg">
           <LogOut className="w-4 h-4 mr-2" />
           {!collapsed && 'Sign Out'}
         </Button>
