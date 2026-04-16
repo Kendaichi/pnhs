@@ -19,7 +19,7 @@ export default function PublicNewsPage() {
               <GraduationCap className="w-5 h-5 text-primary-foreground" />
             </div>
             <div>
-              <p className="text-sm font-heading font-bold text-foreground">RNHS</p>
+              <p className="text-sm font-heading font-bold text-foreground">PNHS</p>
               <p className="text-[11px] text-muted-foreground leading-none">News & Announcements</p>
             </div>
           </div>

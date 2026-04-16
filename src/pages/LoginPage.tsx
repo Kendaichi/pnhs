@@ -53,7 +53,7 @@ export default function LoginPage() {
             <GraduationCap className="w-10 h-10" />
           </div>
           <h1 className="text-4xl font-heading font-bold leading-tight">
-            Rizal National<br />High School
+            Pigdaulan National<br />High School
           </h1>
           <p className="text-lg text-white/80 leading-relaxed">
             Empowering learners through excellence in education. Access grades, attendance, and academic records in one place.

@@ -75,7 +75,7 @@ export function AppSidebar() {
         </div>
         {!collapsed && (
           <div className="min-w-0">
-            <p className="text-sm font-heading font-bold text-sidebar-foreground tracking-tight truncate">RNHS</p>
+            <p className="text-sm font-heading font-bold text-sidebar-foreground tracking-tight truncate">PNHS</p>
             <p className="text-[11px] text-sidebar-foreground/50 capitalize">{user.role} Portal</p>
           </div>
         )}
