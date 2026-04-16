@@ -35,7 +35,7 @@ export default function PublicNewsPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <h1 className="text-3xl sm:text-4xl font-heading font-bold mb-3">School News & Announcements</h1>
           <p className="text-white/75 text-lg max-w-2xl">
-            Stay updated with the latest happenings at Rizal National High School. All official announcements and important dates are posted here.
+            Stay updated with the latest happenings at PNHS (Pigdaulan National High School). All official announcements and important dates are posted here.
           </p>
         </div>
       </div>
@@ -93,7 +93,7 @@ export default function PublicNewsPage() {
       <footer className="border-t border-border bg-card mt-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Rizal National High School · School Management System
+            © {new Date().getFullYear()} PNHS (Pigdaulan National High School) · School Management System
           </p>
         </div>
       </footer>
