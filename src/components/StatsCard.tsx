@@ -11,16 +11,16 @@ interface StatsCardProps {
 
 export function StatsCard({ title, value, icon, description }: StatsCardProps) {
   return (
-    <Card className="shadow-card hover:shadow-card-hover transition-all duration-200 border-0 group">
+    <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50 group cursor-default overflow-hidden relative">
       <CardContent className="p-5">
-        <div className="flex items-start justify-between mb-3">
-          <p className="text-sm font-medium text-muted-foreground">{title}</p>
-          <div className="w-9 h-9 rounded-xl bg-primary/8 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+        <div className="flex items-start justify-between mb-4">
+          <p className="text-[13px] font-medium text-muted-foreground leading-tight">{title}</p>
+          <div className="w-10 h-10 rounded-xl bg-primary/[0.08] flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
             {icon}
           </div>
         </div>
-        <div className="text-2xl font-heading font-bold text-foreground tracking-tight">{value}</div>
-        {description && <p className="text-xs text-muted-foreground mt-1.5">{description}</p>}
+        <div className="text-[28px] font-heading font-extrabold text-foreground tracking-tight leading-none">{value}</div>
+        {description && <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{description}</p>}
       </CardContent>
     </Card>
   );
