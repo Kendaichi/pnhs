@@ -17,14 +17,14 @@ export const guardians: Guardian[] = [
 
 // ===== STAFF =====
 export const staff: Staff[] = [
-  { id: 'st1', employeeNumber: 'EMP-001', firstName: 'Ricardo', lastName: 'Dela Cruz', position: 'School Administrator', department: 'Administration', employmentStatus: 'Permanent', contactNumber: '09201234567', email: 'rdelacruz@rnhs.edu.ph', dateHired: '2010-06-15' },
-  { id: 'st2', employeeNumber: 'EMP-002', firstName: 'Elena', lastName: 'Aquino', position: 'Registrar', department: 'Registrar Office', employmentStatus: 'Permanent', contactNumber: '09211234567', email: 'eaquino@rnhs.edu.ph', dateHired: '2012-06-01' },
-  { id: 'st3', employeeNumber: 'EMP-003', firstName: 'Manuel', lastName: 'Garcia', position: 'Teacher III', department: 'Mathematics', employmentStatus: 'Permanent', contactNumber: '09221234567', email: 'mgarcia@rnhs.edu.ph', dateHired: '2015-06-15' },
-  { id: 'st4', employeeNumber: 'EMP-004', firstName: 'Liza', lastName: 'Mendoza', position: 'Teacher II', department: 'Science', employmentStatus: 'Permanent', contactNumber: '09231234567', email: 'lmendoza@rnhs.edu.ph', dateHired: '2016-06-15' },
-  { id: 'st5', employeeNumber: 'EMP-005', firstName: 'Carlos', lastName: 'Bautista', position: 'Teacher II', department: 'English', employmentStatus: 'Permanent', contactNumber: '09241234567', email: 'cbautista@rnhs.edu.ph', dateHired: '2017-06-15' },
-  { id: 'st6', employeeNumber: 'EMP-006', firstName: 'Rosa', lastName: 'Villanueva', position: 'Teacher I', department: 'Filipino', employmentStatus: 'Contractual', contactNumber: '09251234567', email: 'rvillanueva@rnhs.edu.ph', dateHired: '2020-06-15' },
-  { id: 'st7', employeeNumber: 'EMP-007', firstName: 'Pedro', lastName: 'Ramos', position: 'Teacher I', department: 'TLE', employmentStatus: 'Permanent', contactNumber: '09261234567', email: 'pramos@rnhs.edu.ph', dateHired: '2019-06-15' },
-  { id: 'st8', employeeNumber: 'EMP-008', firstName: 'Grace', lastName: 'Tan', position: 'Teacher I', department: 'MAPEH', employmentStatus: 'Contractual', contactNumber: '09271234567', email: 'gtan@rnhs.edu.ph', dateHired: '2021-06-15' },
+  { id: 'st1', employeeNumber: 'EMP-001', firstName: 'Ricardo', lastName: 'Dela Cruz', position: 'School Administrator', department: 'Administration', employmentStatus: 'Permanent', contactNumber: '09201234567', email: 'rdelacruz@pnhs.edu.ph', dateHired: '2010-06-15' },
+  { id: 'st2', employeeNumber: 'EMP-002', firstName: 'Elena', lastName: 'Aquino', position: 'Registrar', department: 'Registrar Office', employmentStatus: 'Permanent', contactNumber: '09211234567', email: 'eaquino@pnhs.edu.ph', dateHired: '2012-06-01' },
+  { id: 'st3', employeeNumber: 'EMP-003', firstName: 'Manuel', lastName: 'Garcia', position: 'Teacher III', department: 'Mathematics', employmentStatus: 'Permanent', contactNumber: '09221234567', email: 'mgarcia@pnhs.edu.ph', dateHired: '2015-06-15' },
+  { id: 'st4', employeeNumber: 'EMP-004', firstName: 'Liza', lastName: 'Mendoza', position: 'Teacher II', department: 'Science', employmentStatus: 'Permanent', contactNumber: '09231234567', email: 'lmendoza@pnhs.edu.ph', dateHired: '2016-06-15' },
+  { id: 'st5', employeeNumber: 'EMP-005', firstName: 'Carlos', lastName: 'Bautista', position: 'Teacher II', department: 'English', employmentStatus: 'Permanent', contactNumber: '09241234567', email: 'cbautista@pnhs.edu.ph', dateHired: '2017-06-15' },
+  { id: 'st6', employeeNumber: 'EMP-006', firstName: 'Rosa', lastName: 'Villanueva', position: 'Teacher I', department: 'Filipino', employmentStatus: 'Contractual', contactNumber: '09251234567', email: 'rvillanueva@pnhs.edu.ph', dateHired: '2020-06-15' },
+  { id: 'st7', employeeNumber: 'EMP-007', firstName: 'Pedro', lastName: 'Ramos', position: 'Teacher I', department: 'TLE', employmentStatus: 'Permanent', contactNumber: '09261234567', email: 'pramos@pnhs.edu.ph', dateHired: '2019-06-15' },
+  { id: 'st8', employeeNumber: 'EMP-008', firstName: 'Grace', lastName: 'Tan', position: 'Teacher I', department: 'MAPEH', employmentStatus: 'Contractual', contactNumber: '09271234567', email: 'gtan@pnhs.edu.ph', dateHired: '2021-06-15' },
 ];
 
 // ===== SECTIONS =====
