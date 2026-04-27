@@ -189,10 +189,10 @@ function generateAttendance(): AttendanceRecord[] {
 export const attendanceRecords: AttendanceRecord[] = generateAttendance();
 
 // ===== ANNOUNCEMENTS =====
-import welcomeImg from '@/assets/news/welcome-sy.jpg';
-import examsImg from '@/assets/news/exams-schedule.jpg';
-import gradeImg from '@/assets/news/grade-submission.jpg';
-import ptcImg from '@/assets/news/ptc-conference.jpg';
+import welcomeImg from '@/assets/news/welcome-sy.webp';
+import examsImg from '@/assets/news/exams-schedule.webp';
+import gradeImg from '@/assets/news/grade-submission.webp';
+import ptcImg from '@/assets/news/ptc-conference.webp';
 
 export const announcements: Announcement[] = [
   { id: 'ann1', title: 'Welcome to S.Y. 2025-2026!', content: 'PNHS (Pigdaulan National High School) welcomes all students, parents, and staff to a new and exciting school year. Let us work together for a productive academic year ahead.', authorId: 'st1', targetRoles: ['admin', 'teacher', 'registrar', 'parent', 'student'], createdAt: '2025-06-02T08:00:00Z', isPublished: true, imageUrl: welcomeImg },
