@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# PNHS
 
 TODO: Document your project here
